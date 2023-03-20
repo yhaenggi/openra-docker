@@ -24,7 +24,7 @@ WORKDIR /home/openra
 RUN mkdir src
 RUN cd src && wget https://github.com/OpenRA/OpenRA/releases/download/release-${VERSION}/OpenRA-release-${VERSION}-source.tar.bz2 -O - | bzip2 -d | tar xf -
 
-RUN cd src &&  make TARGETPLATFORM=unix-generic RUNTIME=mono
+RUN cd src && make TARGETPLATFORM=unix-generic RUNTIME=mono && rm -R /root/.local/ /root/.nuget/
 
 RUN mkdir .openra .openra/Logs .openra/Content .openra/Replays
 RUN chown -Rv openra:openra .openra

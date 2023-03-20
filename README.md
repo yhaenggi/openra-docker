@@ -2,7 +2,7 @@ These images have been built and tested on docker amd64, arm32v7 and arm64v8. Th
 
 ## Usage ##
 
-    docker run -d -p 1234:1234/tcp yhaenggi/openra:20210321
+    docker run -d -p 1234:1234/tcp yhaenggi/openra:20230225
 
 Its set up to not load any games by default (new game) but you can change it with the CMD argument. 
 
@@ -20,4 +20,5 @@ You can verify binfmt support for multiarch builds with (should show enabled):
     grep -E "arm|aarch" -A1 -R /proc/sys/fs/binfmt_misc/
 
 ## Tags ##
+   * 20230225
    * 20210321
